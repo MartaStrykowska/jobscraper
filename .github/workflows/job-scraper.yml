@@ -9,7 +9,8 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
       
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -17,15 +18,15 @@ jobs:
           node-version: '18'
           
       - name: Install dependencies
-        run: npm install puppeteer axios
-
+        run: npm install
+        
       - name: Run job scraper
         run: node job-scraper.js
         
-      - name: Commit and push if changes
+      - name: Commit and push changes
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add job-results.json
+          git add job-results.json job-report.html
           git diff --quiet && git diff --staged --quiet || git commit -m "Update job listings [skip ci]"
           git push
