@@ -1,0 +1,12 @@
+{
+  "name": "job-scraper",
+  "version": "1.0.0",
+  "description": "Automated job search tool",
+  "main": "job-scraper.js",
+  "scripts": {
+    "start": "node job-scraper.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.3.8"
+  }
+}
