@@ -1,9 +1,13 @@
-// Use CommonJS syntax instead of ES modules for better compatibility
-const puppeteer = require('puppeteer');
+// Use puppeteer-extra with stealth plugin
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs').promises;
 const path = require('path');
 
-// Job titles to search for
+// Apply the stealth plugin
+puppeteer.use(StealthPlugin());
+
+// Job titles to search for - keeping your original list
 const TARGET_JOB_TITLES = [
   'pre-sales solution consultant',
   'product manager',
@@ -16,7 +20,7 @@ const TARGET_JOB_TITLES = [
   'digital product manager'
 ];
 
-// Career URLs to check
+// Career URLs to check - keeping your original list
 const CAREER_URLS = [
   'https://careers.adyen.com/vacancies?location=Amsterdam',
   'https://www.crobox.com/careers-crobox',
@@ -32,10 +36,14 @@ const CAREER_URLS = [
 async function runJobSearch() {
   console.log('Starting job search automation...');
   
-  // Launch browser
+  // Launch browser with stealth mode
   const browser = await puppeteer.launch({
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: [
+      '--no-sandbox', 
+      '--disable-setuid-sandbox',
+      '--disable-blink-features=AutomationControlled'
+    ]
   });
   
   // Results array
@@ -57,12 +65,55 @@ async function runJobSearch() {
       console.log(`\nProcessing: ${careerUrl}`);
       
       const page = await browser.newPage();
-      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+      
+      // Set a more realistic user agent
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36');
+      
+      // Set viewport to a common resolution
       await page.setViewport({ width: 1920, height: 1080 });
       
+      // Add additional headers to appear more like a real browser
+      await page.setExtraHTTPHeaders({
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-User': '?1',
+        'Cache-Control': 'max-age=0'
+      });
+      
       try {
-        // Visit the career page
-        await page.goto(careerUrl, { waitUntil: 'networkidle2', timeout: 60000 });
+        // Log the URL we're trying to access
+        console.log(`Visiting: ${careerUrl}`);
+        
+        // Visit the career page with a longer timeout
+        await page.goto(careerUrl, { 
+          waitUntil: 'networkidle2', 
+          timeout: 60000 
+        });
+        
+        // Take a screenshot for debugging (especially useful for EPAM)
+        if (careerUrl.includes('epam.com')) {
+          await page.screenshot({ path: 'epam-debug.png' });
+          console.log('Saved screenshot to epam-debug.png');
+          
+          // Check if we got blocked
+          const pageContent = await page.content();
+          if (pageContent.includes('Access denied') || pageContent.includes('Error 1005')) {
+            console.error(`Blocked by ${careerUrl} - Access denied`);
+            results.push({
+              careerUrl,
+              lastChecked: new Date().toISOString(),
+              error: 'Access denied by website',
+              jobs: []
+            });
+            continue;
+          }
+        }
         
         // Extract job listings
         const jobListings = await extractJobListings(page);
@@ -134,7 +185,7 @@ async function runJobSearch() {
   }
 }
 
-// Extract job listings from a page
+// Extract job listings from a page - using your original implementation
 async function extractJobListings(page) {
   // Wait for job listings to load
   await page.waitForSelector('a, div, li, tr', { timeout: 10000 });
@@ -186,7 +237,7 @@ async function extractJobListings(page) {
   });
 }
 
-// Filter job listings by target job titles
+// Filter job listings by target job titles - using your original implementation
 function filterJobsByTitle(jobListings, targetTitles) {
   // Create regex patterns for each target job title
   const titlePatterns = targetTitles.map(title => 
@@ -200,7 +251,7 @@ function filterJobsByTitle(jobListings, targetTitles) {
   });
 }
 
-// Generate HTML report
+// Generate HTML report - using your original implementation
 async function generateHtmlReport(results, newJobs) {
   const html = `
 <!DOCTYPE html>
