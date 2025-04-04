@@ -1,27 +1,68 @@
 [
   {
     "careerUrl": "https://careers.adyen.com/vacancies?location=Amsterdam",
-    "lastChecked": "2025-04-03T09:22:00.307Z",
-    "jobs": []
+    "lastChecked": "2025-04-04T09:21:52.612Z",
+    "jobs": [
+      {
+        "title": "Group Product Manager, Banking Network",
+        "location": "",
+        "link": "https://careers.adyen.com/vacancies/6282993-group-product-manager-banking-network?locale=en"
+      },
+      {
+        "title": "Product Manager - Card Schemes",
+        "location": "",
+        "link": "https://careers.adyen.com/vacancies/6692120-product-manager-card-schemes?locale=en"
+      },
+      {
+        "title": "Product Manager - Internal Cloud Services",
+        "location": "",
+        "link": "https://careers.adyen.com/vacancies/6564841-product-manager-internal-cloud-services?locale=en"
+      },
+      {
+        "title": "Senior Product Manager, Database Platforms",
+        "location": "",
+        "link": "https://careers.adyen.com/vacancies/6586807-senior-product-manager-database-platforms?locale=en"
+      },
+      {
+        "title": "Senior Product Manager - Developer Experience",
+        "location": "",
+        "link": "https://careers.adyen.com/vacancies/6578694-senior-product-manager-developer-experience?locale=en"
+      },
+      {
+        "title": "Senior Product Manager, KYC Framework",
+        "location": "",
+        "link": "https://careers.adyen.com/vacancies/6721075-senior-product-manager-kyc-framework?locale=en"
+      },
+      {
+        "title": "Senior Product Manager, Optimization Insights & Performance",
+        "location": "",
+        "link": "https://careers.adyen.com/vacancies/5940967-senior-product-manager-optimization-insights-performance?locale=en"
+      },
+      {
+        "title": "Senior Product Manager - Token Services",
+        "location": "",
+        "link": "https://careers.adyen.com/vacancies/6468409-senior-product-manager-token-services?locale=en"
+      }
+    ]
   },
   {
     "careerUrl": "https://www.crobox.com/careers-crobox",
-    "lastChecked": "2025-04-03T09:22:02.494Z",
+    "lastChecked": "2025-04-04T09:21:55.123Z",
     "jobs": []
   },
   {
     "careerUrl": "https://www.workingatwearebrain.com/",
-    "lastChecked": "2025-04-03T09:22:05.071Z",
+    "lastChecked": "2025-04-04T09:21:57.693Z",
     "jobs": []
   },
   {
     "careerUrl": "https://www.valtech.com/nl-nl/carriere/vacatures/?country=netherlands",
-    "lastChecked": "2025-04-03T09:22:08.408Z",
+    "lastChecked": "2025-04-04T09:22:01.050Z",
     "jobs": []
   },
   {
     "careerUrl": "https://commercetools.com/careers/jobs",
-    "lastChecked": "2025-04-03T09:22:09.625Z",
+    "lastChecked": "2025-04-04T09:22:02.271Z",
     "jobs": [
       {
         "title": "Senior Product Manager - Identity, Access Management, and Security (m/f/x)",
@@ -32,17 +73,17 @@
   },
   {
     "careerUrl": "https://www.contentstack.com/company/careers",
-    "lastChecked": "2025-04-03T09:22:14.871Z",
+    "lastChecked": "2025-04-04T09:22:06.542Z",
     "jobs": []
   },
   {
     "careerUrl": "https://www.epam.com/careers/job-listings?country=Netherlands&city=Amsterdam",
-    "lastChecked": "2025-04-03T09:22:17.131Z",
+    "lastChecked": "2025-04-04T09:22:08.777Z",
     "jobs": []
   },
   {
     "careerUrl": "https://www.bloomreach.com/en/careers",
-    "lastChecked": "2025-04-03T09:22:21.309Z",
+    "lastChecked": "2025-04-04T09:22:10.333Z",
     "jobs": []
   }
 ]
