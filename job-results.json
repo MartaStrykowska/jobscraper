@@ -1,42 +1,48 @@
 [
   {
     "careerUrl": "https://careers.adyen.com/vacancies?location=Amsterdam",
-    "lastChecked": "2025-05-03T09:19:55.352Z",
+    "lastChecked": "2025-05-04T09:20:36.974Z",
     "jobs": []
   },
   {
     "careerUrl": "https://www.crobox.com/careers-crobox",
-    "lastChecked": "2025-05-03T09:20:00.997Z",
+    "lastChecked": "2025-05-04T09:20:39.771Z",
     "jobs": []
   },
   {
     "careerUrl": "https://www.workingatwearebrain.com/",
-    "lastChecked": "2025-05-03T09:20:03.782Z",
+    "lastChecked": "2025-05-04T09:20:42.949Z",
     "jobs": []
   },
   {
     "careerUrl": "https://www.valtech.com/nl-nl/carriere/vacatures/?country=netherlands",
-    "lastChecked": "2025-05-03T09:20:07.324Z",
+    "lastChecked": "2025-05-04T09:20:46.535Z",
     "jobs": []
   },
   {
     "careerUrl": "https://commercetools.com/careers/jobs",
-    "lastChecked": "2025-05-03T09:20:08.356Z",
-    "jobs": []
+    "lastChecked": "2025-05-04T09:20:47.762Z",
+    "jobs": [
+      {
+        "title": "Senior Product Manager - Identity, Access Management, and Security (m/f/x)",
+        "location": "Berlin, Berlin, Germany (Hybrid); Valencia, Spain (Hybrid)",
+        "link": "https://job-boards.greenhouse.io/commercetools/jobs/6513493003"
+      }
+    ]
   },
   {
     "careerUrl": "https://www.contentstack.com/company/careers",
-    "lastChecked": "2025-05-03T09:20:13.241Z",
+    "lastChecked": "2025-05-04T09:20:51.869Z",
     "jobs": []
   },
   {
     "careerUrl": "https://www.epam.com/careers/job-listings?country=Netherlands&city=Amsterdam",
-    "lastChecked": "2025-05-03T09:20:14.530Z",
+    "lastChecked": "2025-05-04T09:20:53.266Z",
     "jobs": []
   },
   {
     "careerUrl": "https://www.bloomreach.com/en/careers",
-    "lastChecked": "2025-05-03T09:20:16.082Z",
+    "lastChecked": "2025-05-04T09:20:55.053Z",
     "jobs": []
   }
 ]
